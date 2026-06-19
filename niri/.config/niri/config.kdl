@@ -5,3 +5,5 @@ include "~/.config/niri/cfg/display.kdl"
 include "~/.config/niri/cfg/layout.kdl"
 // include "~/.config/niri/cfg/animation.kdl"
 include "~/.config/niri/cfg/misc.kdl"
+include "~/.config/niri/cfg/input.kdl"
+

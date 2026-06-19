@@ -1,6 +1,6 @@
 // run 'niri msg outputs' to get display name
 
-/- output "HDMI-A-1" {
+output "HDMI-A-1" {
 	mode "1920x1080@239.964"
 	scale 1
 }
