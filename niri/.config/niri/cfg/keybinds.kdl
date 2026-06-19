@@ -1,0 +1,86 @@
+binds {
+	
+	// hotkey overlay
+	MOD+SHIFT+ESCAPE			{ show-hotkey-overlay; }
+
+	// applications
+	MOD+RETURN				hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
+	MOD+SPACE				hotkey-overlay-title="Open App Launcher: Fuzzel" { spawn "fuzzel"; }
+	MOD+B					hotkey-overlay-title="Open Browser: Vivaldi" { spawn "vivaldi"; }
+	MOD+ALT+L				hotkey-overlay-title="Lock Screen: Sway Lock" { spawn "swaylock"; }
+	MOD+E					hotkey-overlay-title="File Manager: Yazi" { spawn "kitty" "-e" "yazi"; }
+
+	// audio controls
+	// volume
+	XF86AudioRaiseVolume 			allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    	XF86AudioLowerVolume 			allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    	XF86AudioMute        			allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    	XF86AudioMicMute     			allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+	// play and seek
+    	XF86AudioPlay        			allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    	XF86AudioStop        			allow-when-locked=true { spawn-sh "playerctl stop"; }
+    	XF86AudioPrev        			allow-when-locked=true { spawn-sh "playerctl previous"; }
+    	XF86AudioNext        			allow-when-locked=true { spawn-sh "playerctl next"; }
+
+	// close windows
+	MOD+Q					{ close-window; }
+
+	// floating
+	MOD+T					{ toggle-window-floating; }
+	MOD+SHIFT+T				{ switch-focus-between-floating-and-tiling; }
+	
+	// window size
+	MOD+MINUS				{ set-column-width "-10%"; }
+	MOD+EQUAL				{ set-column-width "+10%"; }
+	MOD+F					{ maximize-column; }
+	MOD+CTRL+F				{ expand-column-to-available-width; }
+	MOD+SHIFT+F				{ fullscreen-window; }
+
+	// focus
+	MOD+LEFT				{ focus-column-left; }
+	MOD+H					{ focus-column-left; }
+	MOD+DOWN				{ focus-workspace-down; }
+	MOD+J					{ focus-workspace-down; }
+	MOD+UP					{ focus-workspace-up; }
+	MOD+K					{ focus-workspace-up; }
+	MOD+RIGHT				{ focus-column-right; }
+	MOD+L					{ focus-column-right; }
+
+	MOD+1					{ focus-workspace 1; }
+	MOD+2					{ focus-workspace 2; }
+	MOD+3					{ focus-workspace 3; }
+	MOD+4					{ focus-workspace 4; }
+	MOD+5					{ focus-workspace 5; }
+	MOD+6					{ focus-workspace 6; }
+	MOD+7					{ focus-workspace 7; }
+	MOD+8					{ focus-workspace 8; }
+	MOD+9					{ focus-workspace 9; }
+	
+	// move
+	MOD+CTRL+LEFT				{ move-column-left; }
+	MOD+CTRL+H				{ move-column-left; }
+	MOD+CTRL+DOWN				{ move-column-to-workspace-down; }
+	MOD+CTRL+J				{ move-column-to-workspace-down; }
+	MOD+CTRL+UP				{ move-column-to-workspace-up; }
+	MOD+CTRL+K				{ move-column-to-workspace-up; }
+	MOD+CTRL+RIGHT				{ move-column-right; }
+	MOD+CTRL+L				{ move-column-right; }
+	
+	MOD+CTRL+1 				{ move-column-to-workspace 1; }
+    	MOD+CTRL+2 				{ move-column-to-workspace 2; }
+    	MOD+CTRL+3 				{ move-column-to-workspace 3; }
+    	MOD+CTRL+4 				{ move-column-to-workspace 4; }
+    	MOD+CTRL+5 				{ move-column-to-workspace 5; }
+    	MOD+CTRL+6 				{ move-column-to-workspace 6; }
+    	MOD+CTRL+7 				{ move-column-to-workspace 7; }
+    	MOD+CTRL+8 				{ move-column-to-workspace 8; }
+    	MOD+CTRL+9 				{ move-column-to-workspace 9; }
+
+	// screenshots
+	PRINT					{ screenshot; }
+	CTRL+PRINT				{ screenshot-screen; }
+	ALT+PRINT				{ screenshot-window; }
+
+	// power off monitors -- input key or mouse movment to turn back on
+	MOD+SHIFT+P				{ power-off-monitors; }
+}
