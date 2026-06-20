@@ -46,4 +46,5 @@ alias vim='nvim'
 alias reload='source ~/.config/zsh/.zshrc'
 alias stowit='stow -d ~/dotfiles -t ~'
 
-
+# aliases - theme switcher
+alias hazuki="~/.config/themes/hazuki/scripts/switch.sh"
