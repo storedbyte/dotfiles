@@ -12,7 +12,7 @@ environment {
 
 cursor {
 	xcursor-theme "capitaine-cursors"
-	xcursor-size 30
+	xcursor-size 36
 }
 
 hotkey-overlay {

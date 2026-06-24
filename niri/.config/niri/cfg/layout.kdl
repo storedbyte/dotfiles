@@ -10,5 +10,10 @@ layout {
 		proportion 0.66667
 	}
 
+	border {
+		on
+		width 1
+	}
+
 	struts {}
 }
